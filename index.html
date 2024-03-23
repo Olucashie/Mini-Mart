@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Mart</title>
+    <link rel="stylesheet" href="bootstrap-5.3.2-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+</head>
+<body>
+<!-- modal begins -->
+<!-- Button trigger modal -->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Add To The Beginning</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="alert alert-danger p-1 col-lg- text-center fw-bolder  animate__animated animate__shakeX animate__infinite" id="error1" style="display: none;">Input Field Cannot Be Empty</div>
+      
+        <input type="text" class="form-control shadow-none form-control-sm my-2" id="ip1" placeholder="Input What You Want To Add">
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick="addf() ">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal end -->
+
+<!-- Edit modal -->
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Items</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="alert alert-danger p-1 col-lg- text-center fw-bolder  animate__animated animate__shakeX animate__infinite" id="error2" style="display: none;">Input Field Cannot Be Empty</div>
+      
+        <input type="number" class="form-control shadow-none form-control-sm my-2" id="ip2" placeholder="Input Number That You Wanna Edit">
+        <input type="text" class="form-control shadow-none form-control-sm my-2" id="ip3" placeholder="Type In The New Valuea">
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick="edit()">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ends -->
+
+
+
+    <div class="container-fluid mx-auto col-lg-7 shadow-sm mt-lg-5 mt-2 p-3">
+        <h1 class="text-center text-decoration-underline my-3">Mini Mart</h1>
+        <div class="alert alert-danger p-1 col-lg- text-center fw-bolder  animate__animated animate__shakeX animate__infinite" id="error" style="display: none;">Input Field Cannot Be Empty</div>
+        <input type="text" class="form-control shadow-none form-control-sm my-2" id="inp">
+        <button class="w-100 btn btn-outline-info my-2 btn-sm fw-bolder" onclick="addItem()" >Submit</button>
+    </div>
+    <div class="container-fluid  mx-auto  col-lg-7 col-10 my-4 shadow-sm p-3" id="Biggdiv"></div>
+          
+          <div class="container-fluid  mx-auto  col-lg-7 col-10 my-4 shadow-sm p-3" id="Bigdiv">
+            <table class="table table-orderd" id="show"></table>
+<button class="btn btn-sm btn-danger mx-2 my-2" onclick="delall()" >Delete All</button>
+<button class = "btn btn-outline-success btn-sm " onclick="delf()" id="Delf">Delete Back</button>
+<button  class="btn btn-outline-dark btn-sm" onclick="delb()" id="Delb">Delete Front</button>
+<button  class="btn btn-outline-warning btn-sm"  id="Addf" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Front</button>
+<button  class="btn btn-primary btn-sm" onclick="addb()" id="Addb">Add Back</button>
+<button  class="btn btn-dark btn-sm" onclick="delany()" id="Delany">Delete Any</button>
+<button  class="btn btn-success btn-sm"  id="edit" data-bs-toggle="modal" data-bs-target="#exampleModal2">Edit Any</button>
+
+          </div>
+    <script src="script.js"></script>
+    <script src="bootstrap-5.3.2-dist/js/bootstrap.js"></script>
+</body>
+</html>
